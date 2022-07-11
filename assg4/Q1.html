@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+        body{
+            background-color: #D6EFED;
+        }
+        h1{
+            padding: 10px;
+            border-bottom: solid 2px black;
+            text-align: center;
+            font-weight: bolder;
+        }
+        table{
+            border: solid 2px black;
+            border-collapse: collapse;
+            margin: auto;
+        }
+        th{
+            padding: 10px;
+            font-weight: bolder;
+            font-size: larger;
+        }
+        td{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        STUDENTS INFO
+    </h1>
+    <table>
+        <tr>
+            <th>SIC</th>
+            <th>NAME</th>
+            <th>EMAIL</th>
+            <th>PH.NO</th>
+            <th>BRANCH</th>
+
+        </tr>
+        <tr>
+            <td>20xcea65</td>
+            <td>ayush Bisoyi</td>
+            <td>Ayush@gamil.com</td>
+            <td>789258753</td>
+            <td>IT</td>
+        </tr>
+        <tr>
+            <td>20xcvb56</td>
+            <td>tatsat mohanty</td>
+            <td>tatsat@yahoo.com</td>
+            <td>741459634</td>
+            <td>CEN</td>
+        </tr>
+        <tr>
+            <td>20xbce4</td>
+            <td>sarthak khuntia</td>
+            <td>sarthak@outlook.com</td>
+            <td>7892587531</td>
+            <td>ECE</td>
+        </tr>
+        <tr>
+            <td>20xcsc50</td>
+            <td>rajat kumar</td>
+            <td>rajat2002@gmail.com</td>
+            <td>8103795155</td>
+            <td>CSE</td>
+        </tr>
+    </table>
+    <hr style="backgroundcolour = red;">
+</body>
+<script>
+    const table = document.getElementsByTagName('table')[0];
+    table.rows[0].style.backgroundColor = "#F37878";
+    table.rows[1].style.backgroundColor = "#C8B6E2";
+    table.rows[2].style.backgroundColor = "#DFE8CC";
+    table.rows[3].style.backgroundColor = "#FF0063";
+    table.rows[4].style.backgroundColor = "#73A9AD";
+
+    document.write('THE CONTENT OF EVEN CELLS ARE :-<br><br>');
+
+    for(let i=0;i<table.rows.length;i++)
+    {
+        for(let j=0;j<table.rows[0].cells.length;j++)
+        {
+            if(i%2 == 0 && j%2 == 0)
+            {
+                document.write(`Cell(${i},${j}) - ${table.rows[i].cells[j].innerText}<br>`);
+            }
+
+        }
+    }
+</script>
+</html>

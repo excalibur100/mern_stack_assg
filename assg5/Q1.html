@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <script type="text/javascript">
+    let Employee = {
+      name: "Chirag Chintan Routray",
+      email: "Chirag@gmail.com",
+      phone: 8917596115,
+      basicSalary: 75000,
+      totalSalary: function() {
+        const HRA = .15 * this.basicSalary;
+        const specialAllowance = .2 * this.basicSalary;
+        var totalSal = this.basicSalary + HRA + specialAllowance;
+        if (this.basicSalary > 90000)
+          totalSal = totalSal - (0.30 * totalSal);
+        else if (this.basicSalary > 70000)
+          totalSal = totalSal - (0.20 * totalSal);
+        else if (this.basicSalary > 50000)
+          totalSal = totalSal - (0.15 * totalSal);
+        else if (this.basicSalary > 40000)
+          totalSal = totalSal - (0.10 * totalSal);
+        return totalSal;
+      }
+    }
+    console.log(Employee.name);
+    console.log(Employee.email);
+    console.log(Employee.phone);
+    console.log(Employee.basicSalary);
+    console.log("total salary:- ",Employee.totalSalary());
+  </script>
+</body>
+
+</html>

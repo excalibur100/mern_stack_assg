@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Assignment-4 Q2</title>
+    <style type="text/css">
+       body {
+           font-family: Georgia, 'Times New Roman', Times, serif;
+           background-color: #EAF6F6;
+       }
+
+       input[type="text"] {
+           width: 250px;
+       }
+
+       input[type="submit"],
+       input[type="reset"] {
+           width: 77px;
+           height: 27px;
+           left: 180px;
+           margin-left: 20px;
+           position: relative;
+       }
+
+       form {
+           text-align: left;
+           font-family: Georgia;
+           font-size: 20px;
+           width: 2500px;
+           margin: 20px auto;
+       }
+
+       td {
+           padding: 20px;
+       }
+
+       td:first-child {
+           text-align: right;
+           font-weight: bold;
+       }
+
+       td:last-child {
+           text-align: left;
+   </style>
+    <script>
+        function form_validation() {
+            var name = document.registration.name;
+            if (name.value.length <= 0) {
+                alert("Name cannot be empty");
+                name.focus();
+                return false;
+            }
+            console.log(document.registration.name.value);
+
+            var address = document.registration.address;
+            if (address.value.length <= 0) {
+                alert("Please enter relevant address");
+                address.focus();
+                return false;
+            }
+            console.log(document.registration.address.value);
+
+            var gender = document.registration.gender;
+            if (gender.value.length <= 0) {
+                alert("Please Select the Gender");
+                gender.focus();
+                return false;
+            }
+            console.log(document.registration.gender.value);
+
+            var email = document.registration.email;
+            if (email.value.length <= 0) {
+                alert("Email Id is required");
+                email.focus();
+                return false;
+            }
+            console.log(document.registration.email.value);
+
+            var mobile = document.registration.mobile;
+            if (mobile.value.length <10 || mobile.value.length>10) {
+                alert("Mobile number should 10 characters long");
+                mobile.focus();
+                return false;
+            }
+            console.log(document.registration.mobile.value);
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <h1>REGISTRATION FROM</h1>
+    </center>
+    <hr>
+    <form method="" action="" name="registration" onsubmit="return form_validation()">
+        <h2>Register here</h2>
+        <table>
+            <tr>
+                <td><label>Name: </label></td>
+                <td>
+                    <input type="text" name="name" placeholder="Enter your name">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Gender: </label></td>
+                <td>
+                    <input type="radio" name="gender" value="male">Male
+                    <input type="radio" name="gender" value="female">Female
+                    <input type="radio" name="gender" value="others">Others
+                </td>
+            </tr>
+            <tr>
+                <td><label>Phone Number: </label></td>
+                <td>
+                    <input type="number" name="mobile">
+                </td>
+            </tr>
+            <tr>
+                <td><label>Address: </label></td>
+                <td>
+                    <input type="textarea" size="80" name="address" placeholder="Address of residence">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit" name="submit" value="Submit">
+                    <input type="reset" name="reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
