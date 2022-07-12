@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+    let customer=[
+      {
+        name:'Prince',
+        email:'pri@gmail.com',
+        no_of_times_shopped:5,
+        purchase_history: [
+          {
+          date_of_purchase:'11/07/2022',
+          item_purchased:[
+              {
+                  product_name:'Samsung Galaxy y',
+                  product_price:12000
+              } ,
+              {
+                  product_name:'Mixer',
+                  product_price:4000
+              },
+
+          ]
+       },
+       {
+          date_of_purchase:'04/06/2022',
+          item_purchased:[
+              {
+                  product_name:'jeans',
+                  product_price:1200
+              } ,
+
+
+          ]
+       }
+        ]
+      },
+      {
+          name:'Anubhav',
+        email:'anu@gmail.com',
+        no_of_times_shopped:6,
+        purchase_history: [
+          {
+          date_of_purchase:'01/07/2022',
+          item_purchased:[
+              {
+                  product_name:'Nokia',
+                  product_price:12000
+              } ,
+              {
+                  product_name:'Mix',
+                  product_price:4000
+              },
+
+          ]
+       },
+       {
+          date_of_purchase:'30/06/2022',
+          item_purchased:[
+              {
+                  product_name:'pants',
+                  product_price:1200
+              } ,
+
+
+          ]
+       }
+        ]
+      }
+  ]
+  console.log(`All customers details`);
+  for(let i=0;i<customer.length;i++)
+  {
+     console.log(customer[i].name);
+      console.log(customer[i].email);
+     console.log(customer[i].no_of_times_shopped);
+      for(let j=0;j<customer[i].purchase_history.length;j++)
+      {
+          console.log(customer[i].purchase_history[j].date_of_purchase);
+          for(let k=0;k<customer[i].purchase_history[j].item_purchased.length;k++)
+          {
+              console.log(customer[i].purchase_history[j].item_purchased[k].product_name);
+              console.log(customer[i].purchase_history[j].item_purchased[k].product_price);
+          }
+      }
+
+  }
+  console.log(`customers name who shopped more then 5 times `)
+  for(let i=0;i<customer.length;i++)
+  {
+      if(customer[i].no_of_times_shopped>5)
+      {
+          console.log(customer[i].name);
+      }
+  }
+  let s=0;
+  console.log(`customers names anf their total bill `);
+  for(let i=0;i<customer.length;i++)
+  {
+     console.log(customer[i].name);
+     for(let j=0;j<customer[i].purchase_history.length;j++)
+      {
+          for(let k=0;k<customer[i].purchase_history[j].item_purchased.length;k++)
+          {
+              s=s+customer[i].purchase_history[j].item_purchased[k].product_price;
+          }
+
+      }
+      console.log(`total purchase price=${s}`);
+      s=0;
+  }
+    </script>
+  </body>
+</html>

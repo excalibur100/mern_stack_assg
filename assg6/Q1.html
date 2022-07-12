@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+  <script>
+    let customer = [{
+        name: 'Prince',
+        email: 'pri@gmail.com',
+        no_of_times_shopped: 5,
+        purchase_history: [{
+            date_of_purchase: '11/07/2022',
+            item_purchased: [{
+                product_name: 'Samsung Galaxy y',
+                product_price: 12000
+              },
+              {
+                product_name: 'Mixer',
+                product_price: 4000
+              },
+
+            ]
+          },
+          {
+            date_of_purchase: '04/06/2022',
+            item_purchased: [{
+                product_name: 'jeans',
+                product_price: 1200
+              },
+
+
+            ]
+          }
+        ]
+      },
+      {
+        name: 'Anubhav',
+        email: 'anu@gmail.com',
+        no_of_times_shopped: 6,
+        purchase_history: [{
+            date_of_purchase: '01/07/2022',
+            item_purchased: [{
+                product_name: 'Nokia',
+                product_price: 12000
+              },
+              {
+                product_name: 'Mix',
+                product_price: 4000
+              },
+
+            ]
+          },
+          {
+            date_of_purchase: '30/06/2022',
+            item_purchased: [{
+                product_name: 'pants',
+                product_price: 1200
+              },
+
+
+            ]
+          }
+        ]
+      },
+      {
+        name: 'Tatsat Kun',
+        email: 'Tatsat@gmail.com',
+        no_of_times_shopped: 6,
+        purchase_history: [{
+            date_of_purchase: '12/04/2022',
+            item_purchased: [{
+                product_name: 'mi 11 ultra',
+                product_price: 96000
+              },
+              {
+                product_name: 'RTX 3090',
+                product_price: 40000
+              },
+
+            ]
+          },
+          {
+            date_of_purchase: '30/01/2022',
+            item_purchased: [{
+                product_name: 'Shoes',
+                product_price: 2000
+              },
+
+
+            ]
+          }
+        ]
+      },
+       {
+        name: 'Rashmi Kun',
+        email: 'Rashmi@gmail.com',
+        no_of_times_shopped: 6,
+        purchase_history: [{
+            date_of_purchase: '10/06/2022',
+            item_purchased: [{
+                product_name: 'Samsung galaxy fold',
+                product_price: 120000
+              },
+              {
+                product_name: 'hentai manga',
+                product_price: 4000
+              },
+
+            ]
+          },
+          {
+            date_of_purchase: '03/10/2022',
+            item_purchased: [{
+                product_name: 'Shirts',
+                product_price: 1200
+              },
+
+
+            ]
+          }
+        ]
+      },
+       {
+        name: 'kaneki kun',
+        email: 'kaneki@gmail.com',
+        no_of_times_shopped: 6,
+        purchase_history: [{
+            date_of_purchase: '04/04/2022',
+            item_purchased: [{
+                product_name: 'iphone 15 pro max ultra',
+                product_price: 140000
+              },
+              {
+                product_name: 'keneth cole watch',
+                product_price: 18000
+              },
+
+            ]
+          },
+          {
+            date_of_purchase: '14/05/2022',
+            item_purchased: [{
+                product_name: 'facial products',
+                product_price: 1000
+              },
+
+
+            ]
+          }
+        ]
+      }
+    ]
+    console.log(`All customers details`);
+    for (let i = 0; i < customer.length; i++) {
+      console.log("name:- ",customer[i].name);
+      console.log("EMAIL:- ",customer[i].email);
+      console.log("no. of times shopped:- ",customer[i].no_of_times_shopped);
+      for (let j = 0; j < customer[i].purchase_history.length; j++) {
+        console.log("Date of purchase:- ",customer[i].purchase_history[j].date_of_purchase);
+        for (let k = 0; k < customer[i].purchase_history[j].item_purchased.length; k++) {
+          console.log("item purchased:- ",customer[i].purchase_history[j].item_purchased[k].product_name);
+          console.log("item purchased:- ",customer[i].purchase_history[j].item_purchased[k].product_price);
+        }
+      }
+
+    }
+    console.log(`customers name who shopped more then 5 times `)
+    for (let i = 0; i < customer.length; i++) {
+      if (customer[i].no_of_times_shopped > 5) {
+        console.log(customer[i].name);
+      }
+    }
+    let s = 0;
+    console.log(`customers names and their total bill `);
+    for (let i = 0; i < customer.length; i++) {
+      console.log(customer[i].name);
+      for (let j = 0; j < customer[i].purchase_history.length; j++) {
+        for (let k = 0; k < customer[i].purchase_history[j].item_purchased.length; k++) {
+          s = s + customer[i].purchase_history[j].item_purchased[k].product_price;
+        }
+
+      }
+      console.log(`total purchase price=${s}`);
+      s = 0;
+    }
+  </script>
+</body>
+
+</html>
