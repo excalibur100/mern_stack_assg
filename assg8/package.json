@@ -1,0 +1,14 @@
+{
+  "name": "assg8",
+  "version": "1.0.0",
+  "main": "Q1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "chirag chintan routray",
+  "license": "ISC",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  },
+  "description": ""
+}
