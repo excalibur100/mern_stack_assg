@@ -5,19 +5,24 @@ import {useState} from 'react';
 function App() {
   const [products,setProduct] =useState([
     {
-      product_name:"Lenovo IdeaPad Gaming 3i",
-      product_image:"https://www.lenovo.com/medias/ideapad-gaming3i-photo1-1-.png?context=bWFzdGVyfHJvb3R8MTM4NTExM3xpbWFnZS9wbmd8aDk2L2g2Mi8xNDk0MTgyNzMzNDE3NC5wbmd8NzY4MDMyMzJlYzViMjkyMTQ0NjUxNDcyYTQ4ZDc4ZWE3ZWZiNGNlYWZjMzZlZDBlNDgzMDBkOTNlNDI4NzMwNg",
-      product_price:"65,990",
+      product_name:'DELL XPC 17',
+      product_image:"https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcSB1oUxyABI9CKC_5lscfWNbsecu4JHibS4yg4MMKfP3Rufde9OwEh1SkzF092Bcbjkn6gv5hy9EcHAqhZBXIrPBKazLiYTlZa0dx579H6nuH4RypYqmyIn_A&usqp=CAE",
+      product_price:"Price: 350000/-"
     },
     {
-      product_name:"Glorious Model D",
-      product_image:"https://cdn.salla.sa/H73BtLwk8wHA9gez98cMGEoEFS7Ss7jauuDMegCp.png",
-      product_price:"8,999",
+      product_name:'Nike AIR Jordan 7 RETRO OC',
+      product_image:"https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTvabBzvmGZp7hauIQl7bmfnWy1ElAxH0-rAEe2pLJ5-EGHTSwiliWz8OMPIJepNssieE656wveKVbJ932VoQQ5N24dr1n4B5iHf8N-lRxXyQlCEhqDXNMB3D4&usqp=CAE",
+      product_price:"Price: 17000/-"
     },
     {
-      product_name:"Razer Mouse Bungee V2",
-      product_image:"https://i0.wp.com/compify.in/wp-content/uploads/2020/08/Razer-Mouse-Bungee-V2.jpg",
-      product_price:"1,600",
+      product_name:'Jacon & Co. Astromania',
+      product_image:"https://i.ytimg.com/vi/MnND5Jr9NcY/maxresdefault.jpg",
+      product_price:"Price: 65000000/-"
+    },
+    {
+      product_name:'SAMSUNG GALAXY FOLD 3',
+      product_image:"https://images.moneycontrol.com/static-mcnews/2021/08/Samsung-Galaxy-Z-Fold-3-5G.jpg",
+      product_price:"Price: 130000/-"
     },
   ]);
   const addNewProductHandler=(product)=>{
